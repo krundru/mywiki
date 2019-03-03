@@ -13,6 +13,6 @@
 `uuidgen --time` : Generate uuid <br/>
 
 #### systemctl
-`systemctl list-units --type service` : list all services
-`systemctl list-units --type mount` : list all mount paths 
-`systemctl list-unit-files` : List all service unit files
+`systemctl list-units --type service` : list all services <br/>
+`systemctl list-units --type mount` : list all mount paths <br/>
+`systemctl list-unit-files` : List all service unit files<br/>
