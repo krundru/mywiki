@@ -13,4 +13,5 @@
 `-s0` - unlimited snap size (capture packets for all traffic)<br/>
 `-v` - verbose<br/>
 `sudo tcpdump host 10.10.1.1` capture on host ip (to & from packets)<br/>
+`tcpdump -n dst net 192.168.1.0/24` catpure from cidr block ips
 
