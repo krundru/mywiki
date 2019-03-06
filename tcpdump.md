@@ -14,4 +14,12 @@
 `-v` - verbose<br/>
 `sudo tcpdump host 10.10.1.1` capture on host ip (to & from packets)<br/>
 `tcpdump -n dst net 192.168.1.0/24` catpure from cidr block ips
+`tcpdump -i <interface> -s 65535 -w <some-file>` Capture full packet s <byte size>
+`tcpdump -v -i eth0 -w dump.pcap` reporting
+```
+tcpdump -pni $intf -v "tcp port $port and ( tcp[tcpflags] & tcp-ack != 0 and ( (ip[2:2] - ((ip[0]&0xf)<<2) ) - ((tcp[12]&0xf0)>>2) ) == 0 )"   - keepalive packets
+```
+  
+  
+
 
