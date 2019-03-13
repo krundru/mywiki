@@ -18,9 +18,9 @@
 `systemctl list-unit-files` : List all service unit files<br/>
 
 #### Envoy
-`curl localhost:9001/stats`: for all stats
-`curl localhost:9001/logs` 
-`curl localhost:9001/clusters`
-`curl -X POST localhost:9001/logging`
-`   /logging?<name>=<level> (change single level)`
-`   /logging?level=<level> (change all levels)`
+`curl localhost:9001/stats`: for all stats <br/>
+`curl localhost:9001/logs` <br/>
+`curl localhost:9001/clusters`<br/>
+`curl -X POST localhost:9001/logging` <br/>
+`   /logging?<name>=<level> (change singlelevel)` <br/>
+`   /logging?level=<level> (change all levels)` <br/>
