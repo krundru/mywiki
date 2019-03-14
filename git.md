@@ -25,3 +25,11 @@ alias g.push-amend='git push origin $(g.cb) --force-with-lease'
 alias g.push-u='git push -u origin $(g.cb)'
 alias g.s='git status'
 ```
+#### updating commits
+
+Resetting remote to a certain commit
+
+```
+git reset --hard <commit-hash>
+git push -f origin master
+``` 
