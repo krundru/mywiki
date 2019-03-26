@@ -24,3 +24,6 @@
 `curl -X POST localhost:9001/logging` <br/>
 `   /logging?<name>=<level> (change singlelevel)` <br/>
 `   /logging?level=<level> (change all levels)` <br/>
+
+#### No of threads
+`cat /proc/<PROCESS_PID>/status | grep Threads`
