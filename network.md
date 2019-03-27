@@ -13,13 +13,14 @@
 `-s0` - unlimited snap size (capture packets for all traffic)<br/>
 `-v` - verbose<br/>
 `sudo tcpdump host 10.10.1.1` capture on host ip (to & from packets)<br/>
-`tcpdump -n dst net 192.168.1.0/24` catpure from cidr block ips
-`tcpdump -i <interface> -s 65535 -w <some-file>` Capture full packet s <byte size>
-`tcpdump -v -i eth0 -w dump.pcap` reporting
+`tcpdump -n dst net 192.168.1.0/24` catpure from cidr block ips <br/>
+`tcpdump -i <interface> -s 65535 -w <some-file>` Capture full packet s "byte size" <br/>
+`tcpdump -v -i eth0 -w dump.pcap` reporting <br/>
+Keepalive packets:
 ```
 tcpdump -pni $intf -v "tcp port $port and ( tcp[tcpflags] & tcp-ack != 0 and ( (ip[2:2] - ((ip[0]&0xf)<<2) ) - ((tcp[12]&0xf0)>>2) ) == 0 )"   - keepalive packets
 ```
   
-  
 
-
+#### SS commands
+`ss -tnn state established '( dport = :8080 or sport = :8080 )'` : list all open cx to 8080 <br/>
