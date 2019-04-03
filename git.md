@@ -33,3 +33,7 @@ Resetting remote to a certain commit
 git reset --hard <commit-hash>
 git push -f origin master
 ``` 
+Resetting local comment
+```
+git reset HEAD^ # remove commit locally
+```
