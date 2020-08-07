@@ -20,7 +20,10 @@ Keepalive packets:
 ```
 tcpdump -pni $intf -v "tcp port $port and ( tcp[tcpflags] & tcp-ack != 0 and ( (ip[2:2] - ((ip[0]&0xf)<<2) ) - ((tcp[12]&0xf0)>>2) ) == 0 )"   - keepalive packets
 ```
-  
+Read headers:
+```
+tcpdump -n -S -s 0 -A 'tcp dst port 80' | grep -B3 -A10 "GET /some-path"
+```
 
 #### SS commands
 `ss -tnn state established '( dport = :8080 or sport = :8080 )'` : list all open cx to 8080 <br/>
