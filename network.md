@@ -23,6 +23,7 @@ tcpdump -pni $intf -v "tcp port $port and ( tcp[tcpflags] & tcp-ack != 0 and ( (
 Read headers:
 ```
 tcpdump -n -S -s 0 -A 'tcp dst port 80' | grep -B3 -A10 "GET /some-path"
+tcpdump -i any -nn -A -s 1492 dst port 8080 - on all network interfaces.
 ```
 
 #### SS commands
